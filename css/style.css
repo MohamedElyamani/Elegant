@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*============= start global style ========= */
+section{
+    padding: 5% 0;
+}
+:root{
+    --mainColor: #AB2F52;
+    --secondColor:#FFAF53;
+}
+p{
+    color: #888;
+}
+h1{
+    color: var(--mainColor);
+}
+button{
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+.line{
+    width: 200px;
+    height: 1px;
+    background-color: var(--mainColor);
+    margin: 15px auto 4em;
+}
+/*============= end global style ========= */
+
+
+/*============= start header ========= */
+header{
+    /* background-image: linear-gradient(to bottom); */
+
+    background-image: linear-gradient(to bottom, rgba(187,87,110,0.9), rgba(247,165,83,0.9)), url(../images/bg1.jpg);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+header .wave{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 143px;
+    background: url(../images/wave.png);
+    animation: movment 10s infinite linear;
+} 
+header .wave::before{
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: url(../images/wave.png);
+    opacity: 0.3;
+    width: 100%;
+    height: 143px;
+    animation: movment-2 10s infinite linear;
+}
+header .wave::after{
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: url(../images/wave.png);
+    opacity: 0.8;
+    width: 100%;
+    height: 143px;
+    animation: movment-3 6s infinite linear;
+}
+@keyframes movment {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1360px;
+    }
+}
+@keyframes movment-2 {
+    0%{
+        background-position: 1360px;
+    }
+    100%{
+        background-position: 0;
+    }
+}
+@keyframes movment-3 {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1360px;
+    }
+}
+header .collapse ul li a{
+    font-size: 14px;
+}
+header .collapse ul li a:hover{
+    color: var(--secondColor) !important;
+}
+.headerContent .title h1{
+    font-weight: 600;
+}
+.headerContent .title button{
+    padding: 10px 20px;
+    background: var(--mainColor);
+    border-radius: 30px;
+}
+.headerContent .title button:hover{
+    background-color: #fff;
+    color: var(--secondColor) !important;
+}
+/*============= end header ========= */
+
+/*============= start about ========= */
+.about .text p:nth-child(2){
+    color: var(--secondColor);
+}
+.about .text button{
+    background-color: var(--secondColor);
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+/*============= end about ========= */
+
+/*============= start services ========= */
+#services{
+    background-color: #FAFAFA;
+}
+.serv .icon{
+    color: var(--secondColor);
+}
+.serv h4{
+    font-size: 20px;
+}
+.serv{
+    transition: 0.3s ease-in-out;
+}
+.serv:hover{
+    transform: translateY(-10px);
+}
+.servLine{
+    width: 30%;
+    height: 2px;
+    background: #BCBCBC;
+}
+/*============= end services ========= */
+
+
+/*============= start work ========= */
+
+/*============= end work ========= */
+
+
+/*============= start carsoul ========= */
+#carsoul{
+    background: #000;
+}
+.carousel-item .carsoul-icon{
+    color: var(--mainColor);
+}
+.carousel-item .content h6 span{
+    color: var(--secondColor);
+}
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    outline: none;
+}
+/*============= end carsoul ========= */
+
+
+/*============= start contact ========= */
+#contact{
+    padding-bottom: 0;
+}
+#contact .inputs input{
+    outline: none !important;
+    width: 45%;
+}
+.inputs textarea{
+    height: 100px;
+    resize: none;
+    outline: none !important;
+}
+.inputs .send button{
+    padding: 15px 40px;
+    background-color: var(--mainColor);
+    font-size: 18px;
+    outline: none;
+    transition: 0.2s all ease-in-out;
+}
+.inputs .send button:hover{
+    background-color: #85223e;
+}
+.rights{
+    background-color: #000;
+}
+.rights p{
+    color: #fff;
+    margin-bottom: 0;
+}
+/*============= end contact ========= */
